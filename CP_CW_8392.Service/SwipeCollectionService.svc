@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="CP_CW_8392.Service.ISwipeCollectionService, CP_CW_8392.Service" 
+    Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf"  CodeBehind="SwipeCollectionService.svc.cs" %>

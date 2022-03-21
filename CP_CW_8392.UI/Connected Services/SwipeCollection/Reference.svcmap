@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4ba1cacf-acf8-4133-a729-8b569e3c0b31" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62906/SwipeCollectionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SwipeCollectionService.xsd" MetadataType="Schema" ID="624761d1-5af2-40c9-8f1b-c627d095d98d" SourceId="1" SourceUrl="http://localhost:62906/SwipeCollectionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SwipeCollectionService1.xsd" MetadataType="Schema" ID="4971c988-db7a-470d-8a82-b63835082c9c" SourceId="1" SourceUrl="http://localhost:62906/SwipeCollectionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SwipeCollectionService.wsdl" MetadataType="Wsdl" ID="9b1e4574-6c34-49fa-9cb4-c72baf6e8664" SourceId="1" SourceUrl="http://localhost:62906/SwipeCollectionService.svc?wsdl" />
+    <MetadataFile FileName="SwipeCollectionService2.xsd" MetadataType="Schema" ID="0b3e5975-8352-4c08-b48e-d2514e9e5e00" SourceId="1" SourceUrl="http://localhost:62906/SwipeCollectionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SwipeCollectionService.disco" MetadataType="Disco" ID="dd9f9857-3c71-4cad-9d98-484eae4d245a" SourceId="1" SourceUrl="http://localhost:62906/SwipeCollectionService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
