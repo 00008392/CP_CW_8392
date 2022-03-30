@@ -33,16 +33,17 @@ namespace CP_CW_8392.UI
         //button click event that starts swipe collection
         private void Start_btn_Click(object sender, EventArgs e)
         {
-
-                //invoke collection method on separate thread
-                var startCollectionThread = new Thread(_client.StartCollectingSwipes);
-                //invoke get status method on separate thread
-                var getStatusThread = new Thread(GetStatus);
-                startCollectionThread.Start();
+            //invoke collection method on separate thread
+            var startCollectionThread = new Thread(_client.StartCollectingSwipes);
+            //invoke get status method on separate thread
+            var getStatusThread = new Thread(GetStatus);
+            startCollectionThread.Start();
+            //disable button
+            Start_btn.Enabled = false;
             //little delay to start consuming statuses after swipe retrieval method is called
             Thread.Sleep(100);
             getStatusThread.Start();
-               
+
         }
         //get statuses for each terminal
         private void GetStatus()
@@ -51,11 +52,6 @@ namespace CP_CW_8392.UI
 
             while (shouldGetStatus)
             {
-                //disable button while retrieval is in progress
-                this.Invoke(new MethodInvoker(() =>
-                {
-                    Start_btn.Enabled = false;
-                }));
                 var currentStatuses =_client.GetStatus();
                 if(currentStatuses.Count()>0)
                 {
@@ -88,7 +84,7 @@ namespace CP_CW_8392.UI
                     {
                         //if so, stop calling GetStatus method
                         shouldGetStatus = false;
-                        //enable button while retrieval is finished
+                        //enable button when retrieval is finished
                         this.Invoke(new MethodInvoker(() =>
                         {
                             Start_btn.Enabled = true;

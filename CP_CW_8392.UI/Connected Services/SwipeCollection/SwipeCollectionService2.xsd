@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CP_CW_8392.BLL.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CP_CW_8392.BLL.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:62906/SwipeCollectionService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="ArrayOfTerminal">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Terminal" nillable="true" type="tns:Terminal" />
@@ -14,11 +15,33 @@
   </xs:complexType>
   <xs:element name="Terminal" nillable="true" type="tns:Terminal" />
   <xs:simpleType name="Status">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Waiting" />
-      <xs:enumeration value="InProcess" />
-      <xs:enumeration value="Finished" />
-    </xs:restriction>
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Waiting">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="InProcess">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Finished">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
   </xs:simpleType>
   <xs:element name="Status" nillable="true" type="tns:Status" />
   <xs:complexType name="ArrayOfSwipe">

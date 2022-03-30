@@ -31,22 +31,22 @@ namespace CP_CW_8392.UI
         {
             this.components = new System.ComponentModel.Container();
             this.terminals_dgv = new System.Windows.Forms.DataGridView();
-            this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.terminalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Start_btn = new System.Windows.Forms.Button();
             this.swipes_dgv = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.directionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iPAdddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.swipeDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.swipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.terminalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.terminals_dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terminalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.swipes_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.swipeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terminalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // terminals_dgv
@@ -57,42 +57,22 @@ namespace CP_CW_8392.UI
             this.iPAddressDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.terminals_dgv.DataSource = this.terminalBindingSource;
-            this.terminals_dgv.Location = new System.Drawing.Point(22, 35);
-            this.terminals_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.terminals_dgv.Location = new System.Drawing.Point(29, 43);
+            this.terminals_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.terminals_dgv.Name = "terminals_dgv";
             this.terminals_dgv.RowHeadersWidth = 51;
             this.terminals_dgv.RowTemplate.Height = 24;
             this.terminals_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.terminals_dgv.Size = new System.Drawing.Size(307, 223);
+            this.terminals_dgv.Size = new System.Drawing.Size(409, 274);
             this.terminals_dgv.TabIndex = 0;
             this.terminals_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.swipes_dgv_CellFormatting);
             // 
-            // iPAddressDataGridViewTextBoxColumn
-            // 
-            this.iPAddressDataGridViewTextBoxColumn.DataPropertyName = "IPAddress";
-            this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IPAddress";
-            this.iPAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
-            this.iPAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // terminalBindingSource
-            // 
-            this.terminalBindingSource.DataSource = typeof(CP_CW_8392.UI.SwipeCollection.Terminal);
-            // 
             // Start_btn
             // 
-            this.Start_btn.Location = new System.Drawing.Point(362, 35);
-            this.Start_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Start_btn.Location = new System.Drawing.Point(483, 43);
+            this.Start_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Start_btn.Name = "Start_btn";
-            this.Start_btn.Size = new System.Drawing.Size(122, 38);
+            this.Start_btn.Size = new System.Drawing.Size(163, 47);
             this.Start_btn.TabIndex = 1;
             this.Start_btn.Text = "Start swipe collection";
             this.Start_btn.UseVisualStyleBackColor = true;
@@ -108,13 +88,31 @@ namespace CP_CW_8392.UI
             this.personIdDataGridViewTextBoxColumn,
             this.swipeDateTimeDataGridViewTextBoxColumn});
             this.swipes_dgv.DataSource = this.swipeBindingSource;
-            this.swipes_dgv.Location = new System.Drawing.Point(22, 291);
-            this.swipes_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.swipes_dgv.Location = new System.Drawing.Point(29, 358);
+            this.swipes_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swipes_dgv.Name = "swipes_dgv";
             this.swipes_dgv.RowHeadersWidth = 51;
             this.swipes_dgv.RowTemplate.Height = 24;
-            this.swipes_dgv.Size = new System.Drawing.Size(538, 223);
+            this.swipes_dgv.Size = new System.Drawing.Size(717, 274);
             this.swipes_dgv.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Progress of terminals";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 338);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Swipes";
             // 
             // directionDataGridViewTextBoxColumn
             // 
@@ -152,44 +150,44 @@ namespace CP_CW_8392.UI
             // 
             this.swipeBindingSource.DataSource = typeof(CP_CW_8392.UI.SwipeCollection.Swipe);
             // 
-            // label1
+            // iPAddressDataGridViewTextBoxColumn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Progress of terminals";
+            this.iPAddressDataGridViewTextBoxColumn.DataPropertyName = "IPAddress";
+            this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IPAddress";
+            this.iPAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
+            this.iPAddressDataGridViewTextBoxColumn.Width = 125;
             // 
-            // label2
+            // statusDataGridViewTextBoxColumn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 275);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Swipes";
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // terminalBindingSource
+            // 
+            this.terminalBindingSource.DataSource = typeof(CP_CW_8392.UI.SwipeCollection.Terminal);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 530);
+            this.ClientSize = new System.Drawing.Size(801, 652);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.swipes_dgv);
             this.Controls.Add(this.Start_btn);
             this.Controls.Add(this.terminals_dgv);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.terminals_dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terminalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.swipes_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.swipeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terminalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

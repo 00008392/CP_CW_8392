@@ -16,7 +16,7 @@ namespace CP_CW_8392.BLL.Services
         //list of terminals swipes are retrieved from
         private List<Terminal> _terminals = new List<Terminal>();
         //semaphore object to control number of terminals processing swipes
-        private Semaphore semaphore = new Semaphore(3, 3);
+        private Semaphore _semaphore = new Semaphore(3, 3);
         //inject repository into service
         public SwipeService(ISwipeRepository repository)
         {
@@ -96,7 +96,7 @@ namespace CP_CW_8392.BLL.Services
             //before going into critical section, put terminal into waiting state
             terminal.Status = Status.Waiting;
             //enter critical section
-            semaphore.WaitOne();
+            _semaphore.WaitOne();
             //indicate in status that terminal entered into critical section
             terminal.Status = Status.InProcess;
             //retrieve swipes from terminal
@@ -108,7 +108,7 @@ namespace CP_CW_8392.BLL.Services
             //in the end, change status
             terminal.Status = Status.Finished;
             //exit from critical section
-            semaphore.Release();
+            _semaphore.Release();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace CP_CW_8392.DAL.Repositories
         {
             _connectionStr = connectionStr;
         }
+
         public ICollection<Swipe> GetSwipes()
         {
             using(var context = new SwipeCollectionDbContext(_connectionStr))

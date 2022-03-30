@@ -75,6 +75,7 @@ namespace CP_CW_8392.UI.SwipeCollection {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.FlagsAttribute()]
     [System.Runtime.Serialization.DataContractAttribute(Name="Status", Namespace="http://schemas.datacontract.org/2004/07/CP_CW_8392.BLL.Models")]
     public enum Status : int {
         
