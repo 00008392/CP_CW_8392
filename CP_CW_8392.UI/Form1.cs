@@ -13,17 +13,17 @@ using System.Windows.Forms;
 
 namespace CP_CW_8392.UI
 {
-    public partial class Form1 : Form
+    public partial class SwipeCollectionForm : Form
     {
         //list of terminals and their statuses displayed in data grid view
         private List<Terminal> _terminalStatuses = new List<Terminal>();
         private SwipeCollectionServiceClient _client = new SwipeCollectionServiceClient();
 
-        public Form1()
+        public SwipeCollectionForm()
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
+        private void SwipeCollectionForm_Load(object sender, EventArgs e)
         {
             //if there are already swipes in the db, populate data grid view
             PopulateSwipesTable();
